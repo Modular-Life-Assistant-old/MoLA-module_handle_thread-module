@@ -1,3 +1,4 @@
+from core import Log
 from core import ModuleManager
 
 import threading

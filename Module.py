@@ -35,5 +35,6 @@ class Module:
 
     def stop_thread(self, module_name, method_handle):
         for thread in self.__thread_list[module_name]:
-            thread._Thread__stop()
-            self.__thread_list.remove(thread)
+            thread._stop()
+
+        del self.__thread_list[module_name]
